@@ -16,10 +16,10 @@ type IP struct {
 
 func main() {
 	for {
-		time.Sleep(15 * time.Minute)
 		//fmt.Println(getIP())
 		data := []string{time.Now().Format("2006-01-02 15:04:05"), getIP()}
 		writeToFile("data.csv", data)
+		time.Sleep(15 * time.Minute)
 	}
 }
 
